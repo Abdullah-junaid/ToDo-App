@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>toDoApp</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap" rel="stylesheet">
+    <link href='https://css.gg/add-r.css' rel='stylesheet'>
+    <link href='https://css.gg/trash-empty.css' rel='stylesheet'>
+    <link href='https://css.gg/edit-markup.css' rel='stylesheet'>
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-database.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyCBZLPxyLN1HrynEbdWg4bNQJHl1flNxJU",
+          authDomain: "todo-app-40933.firebaseapp.com",
+          databaseURL: "https://todo-app-40933.firebaseio.com",
+          projectId: "todo-app-40933",
+          storageBucket: "todo-app-40933.appspot.com",
+          messagingSenderId: "297857162491",
+          appId: "1:297857162491:web:0a950eb9e7a30ee4d8a45e"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+      </script>
+</head>
+
+<body>
+
+
+    <div class="header">
+        <div>
+            <h1>ToDo</h1>
+            <input type="text" name="" id="text-bar">
+            <button id="add-btn" onclick="addTodo()"><i class="gg-add-r"></i></button>
+            <button id="trash-btn" onclick="dltAll()"><i class="gg-trash-empty"></i></button>
+        </div>
+        <div id="todo-list">
+            <ul id="main-case">
+
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
