@@ -1,10 +1,36 @@
+/* function disabled() {if 
+    (textBar.value === "")
+{
+    addBtn.setAttribute("disabled","disabled")
+}
+else
+{
+addBtn.removeAttribute("disabled","disabled")
+}}
+ */
+
+
 
 var ul = document.getElementById('main-case')
 var textBar = document.getElementById('text-bar')
 var addBtn = document.getElementById('add-btn')
 var database = firebase.database().ref('todos')
+function(todobtn){
+if (textBar.value.trim() != "") 
+{
+ addBtn.disabled = falsa;    
+}
+ else
+  {
+    addBtn.disabled = false;
+}
+}
 firebase.database().ref('todos').on('child_added',function(data){
     console.log(data.val())
+
+
+
+
 
     var li =document.createElement('li')
      var liText =document.createTextNode(data.val().value)
